@@ -1,0 +1,86 @@
+<!-- Set HTML Doctype -->
+<!DOCTYPE html>
+
+<html lang="pl">
+<head>
+
+    <!-- Meta info update. -->
+    <title>Lobby</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Import stylesheets -->
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <!-- Import background scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.waves.min.js"></script>
+    
+    <!-- Firebase SDK by Microplay Interactive -->
+    <script type="text/javascript" src="https://microplay.ml/firebase/js/1.42/sdk/Firebase-min.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/firebasejs/9.14.0/firebase-app-compat.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/firebasejs/9.14.0/firebase-firestore-compat.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/firebasejs/9.14.0/firebase-database-compat.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/firebasejs/9.14.0/firebase-functions-compat.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/firebasejs/9.14.0/firebase-auth-compat.js"></script>
+
+    <!-- Import others scripts -->
+    <script src="/Scripts/music.js"></script>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <div class="nav"></div>
+
+    <!-- Main container -->
+    <div id="app">
+
+        <!-- Main content -->
+        <div class="content">
+
+            <!-- Options row -->
+            <div class="row">
+
+                <!-- Options for lobby -->
+                <div class="hostGame">
+                    <span class="material-symbols-outlined">gite</span>
+                    <h1>Utwórz sesję</h1>
+                    <button style="margin-top: 40px;">Stwórz sesję</button>
+                </div>
+
+                <div class="exploreServers">
+                    <span class="material-symbols-outlined">public</span>
+                    <h1>Przeglądaj serwery publiczne</h1>
+                    <br>
+                    <table>
+                        <tr>
+                            <th>Autor</th>
+                            <th>Liczba graczy</th>
+                            <th>Dołącz</th>
+                        </tr>
+                        <tr>
+                            <td>SuperKing</td>
+                            <td><span class="material-symbols-outlined" style="font-size: 25px; float: left;">account_circle</span>1/2</td>
+                            <td><button join>Dołącz</button></td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="joinViaCode">
+                    <span class="material-symbols-outlined">key</span>
+                    <h1>Dołącz poprzez kod</h1>
+                    <input style="margin-top: 10px;" id="joinCode" placeholder="Wprowadź kod...">
+                    <button style="margin-top: 20px;">Dołącz</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Import frontend scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.rings.min.js"></script>
+    <script src="/Scripts/bg.js"></script>
+</body>
+</html>

@@ -1,0 +1,123 @@
+@font-face {
+    font-family: 'heavy';
+    src: url('/Fonts/Uni\ Sans\ Heavy.otf');
+}
+@font-face {
+    font-family: 'thin';
+    src: url('/Fonts/Uni\ Sans\ Thin.otf');
+}
+:root {
+    --primary: #0f6cbd;
+}
+* {
+    padding: 0;
+    margin: 0;
+}
+body, html {
+    background-color: #f0f0f0;
+    /* font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+    font-family: 'heavy';
+}
+.nav {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 48px;
+    background-color: var(--primary);
+}
+.leftBar {
+    float: left;
+    height: calc(100vh - 48px);
+    width: 48px;
+    background-color: #f0f0f0;
+}
+#app {
+    width: 100%;
+    height: calc(100vh - 48px);
+}
+input {
+    border: none;
+    padding: 5px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    min-width: 240px;
+    min-height: 20px;
+    font-size: 25px;
+}
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    user-select: none;
+    background-color: white;
+    padding-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 10px 24px 0px rgba(255, 255, 255, 1);
+}
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    height: fit-content;
+}
+.content div span {
+    font-size: 140px;
+    color: var(--primary)
+
+}
+table {
+    font-family: 'thin';
+    border-collapse: collapse;
+    width: 100%;
+}
+td, th {
+border: 1px solid #dddddd;
+text-align: left;
+padding: 8px;
+}
+th {
+    font-family: heavy;
+}
+tr:nth-child(even) {
+background-color: #dddddd;
+}
+.hostGame, .exploreServers, .joinViaCode {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.hostGame {
+    width: 35%;
+    height: fit-content;
+}
+.exploreServers {
+    width: 55%;
+    height: fit-content;
+}
+.joinViaCode {
+    width: 35%;
+    height: fit-content;
+}
+button[join] {
+    min-width: 120px;
+    min-height: 30px;
+}
+button {
+    padding: 5px;
+    border: none;
+    color: white;
+    background-color: var(--primary);
+    border-radius: 10px;
+    min-width: 200px;
+    min-height: 40px;
+    font-size: 16px;
+    filter: brightness(100%);
+    transition: 0.2s;
+}
+button:hover {
+    filter: brightness(110%);
+    transition: 0.2s;
+}
