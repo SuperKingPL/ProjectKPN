@@ -11,8 +11,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- Import stylesheets -->
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="Styles/style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="/Styles/global.css">
 
     <!-- Import background scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
@@ -28,46 +29,44 @@
 
     <!-- Import others scripts -->
     <script src="/Scripts/music.js"></script>
+    <script src="/Scripts/server.js"></script>
 </head>
 
 <body>
     <!-- Navbar -->
     <div class="nav"></div>
-
+   
     <!-- Main container -->
     <div id="app">
+        <img src="/Assets/logo.png" class="logo">
 
         <!-- Main content -->
         <div class="content">
 
             <!-- Options row -->
             <div class="row">
-
-                <!-- Options for lobby -->
+                <!-- Option for lobby -->
                 <div class="hostGame">
                     <span class="material-symbols-outlined">gite</span>
                     <h1>Utwórz sesję</h1>
-                    <button style="margin-top: 40px;">Stwórz sesję</button>
+                    <button style="margin-top: 63px;">Stwórz sesję</button>
                 </div>
-
+                <!-- Option for lobby -->
                 <div class="exploreServers">
                     <span class="material-symbols-outlined">public</span>
                     <h1>Przeglądaj serwery publiczne</h1>
                     <br>
-                    <table>
+
+                    <!-- Enabled -->
+                    <table id="serversTable">
                         <tr>
                             <th>Autor</th>
                             <th>Liczba graczy</th>
                             <th>Dołącz</th>
                         </tr>
-                        <tr>
-                            <td>SuperKing</td>
-                            <td><span class="material-symbols-outlined" style="font-size: 25px; float: left;">account_circle</span>1/2</td>
-                            <td><button join>Dołącz</button></td>
-                        </tr>
                     </table>
                 </div>
-
+                <!-- Option for lobby -->
                 <div class="joinViaCode">
                     <span class="material-symbols-outlined">key</span>
                     <h1>Dołącz poprzez kod</h1>
@@ -82,5 +81,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.rings.min.js"></script>
     <script src="/Scripts/bg.js"></script>
+    <script src="/Scripts/publicServers.js"></script>
+    <script src="/Scripts/music.js"></script>
 </body>
 </html>

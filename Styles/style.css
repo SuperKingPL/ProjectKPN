@@ -8,6 +8,7 @@
 }
 :root {
     --primary: #0f6cbd;
+    /* #0f6cbd */
 }
 * {
     padding: 0;
@@ -25,12 +26,6 @@ body, html {
     height: 48px;
     background-color: var(--primary);
 }
-.leftBar {
-    float: left;
-    height: calc(100vh - 48px);
-    width: 48px;
-    background-color: #f0f0f0;
-}
 #app {
     width: 100%;
     height: calc(100vh - 48px);
@@ -40,9 +35,16 @@ input {
     padding: 5px;
     background-color: #f0f0f0;
     border-radius: 5px;
-    min-width: 240px;
+    width: 189px;
     min-height: 20px;
-    font-size: 25px;
+    font-size: 20px;
+}
+.leftBar {
+    display: block;
+    float: left;
+    height: 100vh;
+    width: 50px;
+    background-color: white;
 }
 .content {
     display: flex;
@@ -53,8 +55,8 @@ input {
     user-select: none;
     background-color: white;
     padding-bottom: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 10px 24px 0px rgba(255, 255, 255, 1);
+    /* box-shadow: 0px 10px 24px 0px rgba(255, 255, 255, 1); */
+    border-bottom: solid;
 }
 .row {
     display: flex;
@@ -65,7 +67,7 @@ input {
 }
 .content div span {
     font-size: 140px;
-    color: var(--primary)
+    color: #029cf6;
 
 }
 table {
@@ -89,6 +91,12 @@ background-color: #dddddd;
     flex-direction: column;
     align-items: center;
 }
+.hostGame > h1, .exploreServers > h1, .joinViaCode > h1 {
+    padding: 5px;
+    background-color: var(--primary);
+    border-radius: 15px;
+    color: white;
+}
 .hostGame {
     width: 35%;
     height: fit-content;
@@ -100,24 +108,4 @@ background-color: #dddddd;
 .joinViaCode {
     width: 35%;
     height: fit-content;
-}
-button[join] {
-    min-width: 120px;
-    min-height: 30px;
-}
-button {
-    padding: 5px;
-    border: none;
-    color: white;
-    background-color: var(--primary);
-    border-radius: 10px;
-    min-width: 200px;
-    min-height: 40px;
-    font-size: 16px;
-    filter: brightness(100%);
-    transition: 0.2s;
-}
-button:hover {
-    filter: brightness(110%);
-    transition: 0.2s;
 }

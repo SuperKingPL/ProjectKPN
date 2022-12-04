@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Papier, kamień, nożyce - sesja</title>
+    <link rel="stylesheet" href="Styles/game.css">
+    <link rel="stylesheet" href="/Styles/global.css">
+
+    <!-- Firebase SDK by Microplay Interactive -->
+    <script type="text/javascript" src="https://microplay.ml/firebase/js/1.42/sdk/Firebase-min.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/firebasejs/9.14.0/firebase-app-compat.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/firebasejs/9.14.0/firebase-firestore-compat.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/firebasejs/9.14.0/firebase-database-compat.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/firebasejs/9.14.0/firebase-functions-compat.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/firebasejs/9.14.0/firebase-auth-compat.js"></script>
+    <script src="/Scripts/music.js"></script>
+
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+</head>
+<body>
+    <img src="/Assets/logo.png" class="logo">
+    <div class="app">
+        <div id="app"></div>
+        <!-- <div class="panel">
+            <img src="/Assets/Ikony/Kamien.png" alt="Kamień" width="136px" height="136px">
+            <img src="/Assets/Ikony/Papier.png" alt="Papier" width="136px" height="136px">
+            <img src="/Assets/Ikony/Nozyce.png" alt="Nożyce" width="101px" height="136px">
+        </div> -->
+        <h1 id="code" style="padding: 10px; background-color: white; border-radius: 10px;"><span class="material-symbols-outlined">key</span>Kod do dołączenia: 123456</h1>
+        <div class="hostOptions">
+            <h1>Opcje hosta</h1>
+            <h2><span class="material-symbols-outlined">group</span> Gracze (1/10)</h2>
+            <table id="serversTable">
+                <tr>
+                    <th>Nazwa</th>
+                    <th>Wyrzuć</th>
+                </tr>
+                <tr>
+                    <td>SuperKing</td>
+                    <td><button red>Wyrzuć</button></td>
+                </tr>
+                <tr>
+                    <td>SuperKing</td>
+                    <td><button red>Wyrzuć</button></td>
+                </tr>
+                <tr>
+                    <td>SuperKing</td>
+                    <td><button red>Wyrzuć</button></td>
+                </tr>
+                <tr>
+                    <td>SuperKing</td>
+                    <td><button red>Wyrzuć</button></td>
+                </tr>
+                <tr>
+                    <td>SuperKing</td>
+                    <td><button red>Wyrzuć</button></td>
+                </tr>
+            </table>
+            <button style="margin-top: 10px; margin-bottom: 10px;">Rozpocznij grę</button>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.rings.min.js"></script>
+
+    <script src="/Scripts/bg.js"></script>
+</body>
+</html>
