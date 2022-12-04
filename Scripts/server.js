@@ -18,4 +18,24 @@ function createGame(authorName) {
     const nowDatetime = Date.now();
     db.add(API_ENDPOINT + "/rooms/", {author: authorName, players: 1, playersMax: 2, created: nowDatetime});
 }
-createGame("SuperKing");
+document.getElementById("serversTable").innerHTML = "";
+// Public servers
+function getPublicServers(res = () => {}) {
+    db.get(API_ENDPOINT + "/rooms", (e) => {
+        res(Object.entries(e));
+    });
+}
+function addServersToList() {
+    getPublicServers((e) => {
+        document.getElementById("serversTable").innerHTML = "";
+        for (let i in e) {
+            addPublicServer(e[i][1]["author"], e[i][1]["players"])
+        }
+    });
+}
+db.onChange(API_ENDPOINT + "/rooms", "child_added", () => {
+    addServersToList();
+});
+db.onChange(API_ENDPOINT = "/rooms", "child_removed", () => {
+    addServersToList();
+});
